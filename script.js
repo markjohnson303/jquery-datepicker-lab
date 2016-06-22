@@ -14,7 +14,7 @@ function daysLeft() {
 
 	var b = today.getTime();
 	var c = 24*60*60*1000;
-	var d = timeDiff = Math.round((a-b)/c);
+	var difference = Math.round((a-b)/c);
 
 	// we will remove this later:
 	return a;
@@ -26,6 +26,11 @@ $("#datepicker").on("change", function(a){
 	console.log(a);
 });
 
+
+	var a = $( "#datepicker" ).datepicker('getDate').getTime();
+	var b = today.getTime();
+	var c = 24*60*60*1000;
+	var diffDays = Math.round((a - b)/c);
 
 
 // 9. For the second variable `b`, today's time, you need to call getTime on your today variable
