@@ -27,12 +27,6 @@ $("#datepicker").on("change", function(a){
 });
 
 
-	var a = $( "#datepicker" ).datepicker('getDate').getTime();
-	var b = today.getTime();
-	var c = 24*60*60*1000;
-	var diffDays = Math.round((a - b)/c);
-
-
 // 9. For the second variable `b`, today's time, you need to call getTime on your today variable
 
 // 10. Now we need a variable to store the difference in days between today and the end date selected by the user.
