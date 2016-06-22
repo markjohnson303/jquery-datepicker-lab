@@ -7,7 +7,7 @@
 // 1. To begin, we need a variable to reference the current time when a user loads the page.
 // Create a variable "today" as an instance of the Date object.
 
-// _____
+var today = new Date();
 
 // You can read all about the Date object here:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -21,7 +21,9 @@
 // Date.getMonth();
 // Date.getFullYear();
 
-// _____
+var day = today.getDate();
+var month = today.getMonth();
+var year = today.getFullYear();
 // _____
 // _____
 
@@ -30,8 +32,8 @@
 // Create a month names array using the new keyword and the Array() prototype object.
 // Populate the array with three-letter string abbreviations for each month.
 
-// _____
+var months = ["Jan", "Feb,", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // 4. Now we have everything we need to create our HTML string. Use jQuery's .html() method.
 
-// $("#todayDate").html(____);
+$("#todayDate").html(months[month] + " " + day + " " + year);
